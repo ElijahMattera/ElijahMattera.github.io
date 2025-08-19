@@ -45,17 +45,18 @@ repeat: 3
   
   // TODO 0 complete
   // TODO 2: add a new property to all data shapes
-  For (var i = 0; i < dataShapes.length; i++) {
+  for (var t = 0; i < dataShapes.length; i++) 
     var currentShape = dataShapes[i];
-    if (currentShape.color ==== "red") {
-      currentShape.goodbehavior = "bounce";
+  
+    if (currentShape.color === "red") {
+      currentShape.goodbehavior === "bounce";
     } else if (currentShape.color === "blue") {
-      currentShape.goodBehavior = "blink")
+      currentShape.goodBehavior === "blink"
       } else { 
-        currentShape.goodBehavior = "spin";
-      }
+        currentShape.goodBehavior === "spin"
+      
     }
-
+  
   // TODO 3-a: add a function that handles the static display type
    function handleStatic(data) {
     setBackgroundWithObject(data);
@@ -72,7 +73,7 @@ repeat: 3
   function handleBad(data, repeat) {
     repeat = repeat + 1;
     setBackgroundWithMixed(data, repeat);
-    animationDEtails.displayType = 3;
+    animationDetails.displayType = 3;
   }
 
   /////////////////////////////////////////////////
