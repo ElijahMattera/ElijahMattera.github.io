@@ -1,70 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Elijah's Home</title>
 
-body {
-    background: rgb(104, 4, 94);
-    color: rgb(45, 45, 45);
-    padding: 10px;
-    font-family: arial;
-  }
-  
-  #all-contents {
-  max-width: 800px;
-    margin: auto;
-  }
-  
-  /* navigation menu */
-  nav {
-    background: rgb(198, 4, 140);
-   margin: 0 auto;
-    display: flex;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  h1 {
-    display: flex;
-    align-items: center;
-    color: white;
-    flex: 1;
-    margin: 0;
-  }
-  #nav-ul {
-    list-style-image: none;
-  }
-  .nav-li {
-    display: inline-block;
-    padding: 0 10px;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  /* main container area beneath menu */
-  main {
-    background: rgb(245, 238, 219);
-    display: flex;
-    border-radius: 10px;
-  }
-  .sidebar {
-    margin-right: 25px;
-    padding: 10px;
-  }
-  .sidebar-img {
-    width: 200px;
-    border-radius: 10px;
-  }
-  .content {
-    flex: 1;
-    padding: 15px;
-  }
-  
-  /* portfolio styles */
-  #interests {
-    border: 4px silver ridge;
-    border-radius: 10px;
-    padding: 8px;
-    border-style: dotted;
-  }
-  h2, h3 {
-    margin: 0px;
-  }
+        <style type="text/css">
+          body {
+              background: url("https://i.imgur.com/WVjLEMR.png") no-repeat center center fixed;
+              background-size: cover;
+              color: rgb(45, 45, 45);
+              padding: 10px;
+              font-family: Arial, sans-serif;
+              margin: 0;
+          }
+          header {
+              font-size: 1.5em;
+              font-weight: bold;
+          }
+ 
+          #all-contents {
+              max-width: 800px;
+              margin: 0 auto;   /* fixed: centers content */
+          }
+ 
+          /* navigation menu */
+          nav {
+              background: rgb(198, 4, 140);
+              display: flex;
+              padding: 10px;
+              border-radius: 10px;
+              /* MAGENTA CHROMA GLOW */
+              box-shadow: 0 0 15px rgba(255, 0, 200, 0.8),
+                          0 0 30px rgba(255, 0, 200, 0.6);
+          }
+          h1 {
+              display: flex;
+              align-items: center;
+              color: rgb(255, 255, 255);
+              flex: 1;
+              margin: 0;
+              /* White glowing chroma for text */
+              text-shadow: 0 0 5px #fff,
+                           0 0 10px #fff,
+                           0 0 20px magenta;
+          }
+          #nav-ul {
+              list-style-image: none;
+              margin: 0;
+              padding: 0;
+          }
+          .nav-li {
+              display: inline-block;
+              padding: 0 10px;
+          }
+          .nav-a {
+              text-decoration: none;
+              color: #fff;
+              /* White neon glow on links */
+              text-shadow: 0 0 5px #fff,
+                           0 0 10px magenta,
+                           0 0 20px magenta;
+          }
+ 
+          /* main container */
+          main {
+              background: rgb(245, 238, 219);
+              display: flex;
+              border-radius: 10px;
+              padding: 15px;
+              margin-top: 10px;
+              /* White glow */
+              box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                          0 0 30px rgba(255, 0, 200, 0.6);
+          }
+
+          /* sidebar (image on left) */
+          .sidebar {
+              margin-right: 20px;
+          }
+          .sidebar img {
+              width: 200px;
+              border-radius: 10px;
+              box-shadow: 0 0 15px magenta,
+                          0 0 25px white;
+          }
+
+          /* content (text on right) */
+          .content {
+              flex: 1;
+          }
+          .content h2, 
+          .content h3, 
+          .content p, 
+          .content li {
+              /* White chroma glow on all text inside main box */
+              text-shadow: 0 0 5px #fff,
+                           0 0 10px magenta;
+          }
+        </style>
+    </head>
+
+    <body>
+      <div id="all-contents">
+        <nav>
+            <h1>Elijah Mattera's First Website</h1>
+            <ul id="nav-ul">
+               <li class="nav-li">
+                 <a class="nav-a" href="index.html">Home</a>
+               </li>
+               <li class="nav-li">
+                 <a class="nav-a" href="portfolio.html">Portfolio</a>
+               </li>
+            </ul>
+        </nav>
+
+        <main>
+          <!-- Sidebar with image on the left -->
+          <div class="sidebar">
+            <img src="https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp" 
+                 alt="Profile Image">
+          </div>
+
+          <!-- Content on the right -->
+          <div class="content">
+            <h2>Elijah Mattera</h2>
+            <p>Student at Covington High School</p>
+            <h3>Interests</h3>
+            <ul>
+              <li>Anime</li>
+              <li>Music</li>
+              <li>Video Games</li>
+            </ul>
+          </div>
+        </main>
+
+      </div>
+    </body>
+</html>

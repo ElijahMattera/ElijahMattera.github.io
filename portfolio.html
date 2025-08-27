@@ -2,126 +2,128 @@
 <html>
     <head>
         <title>Elijah's Portfolio</title>
-
         <style type="text/css">
           body {
-              background: rgb(104, 4, 94);
-              color: rgb(45, 45, 45);
-              padding: 10px;
+              background: url('https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp') no-repeat center center fixed;
+              background-size: cover;
               font-family: arial;
-          }
-          header {
-              font-size: 1.5em;
-              font-weight: bold;
-          }
- 
-          #all-contents {
-              max-width: 800px;
-              margin: auto;
-          }
- 
-          /* navigation menu */
-          nav {
-              background: rgb(198, 4, 140);
-              margin: 0 auto;
-              display: flex;
-              padding: 10px;
-          }
-          h1 {
-              display: flex;
-              align-items: center;
-              color: rgb(255, 255, 255);
-              flex: 1;
               margin: 0;
+              padding: 0;
+              color: #2d2d2d;
+          }
+
+          /* LEFT PANEL (nav + content) */
+          #left-panel {
+              background: rgba(245, 238, 219, 0.95);
+              width: 380px;
+              min-height: 100vh;
+              padding: 20px;
+              box-sizing: border-box;
+              border-radius: 0 15px 15px 0;
+              display: flex;
+              flex-direction: column;
+          }
+
+          /* Navigation */
+          nav {
+              background: linear-gradient(to right, magenta, white);
+              padding: 15px;
+              border-radius: 10px;
+              margin-bottom: 20px;
+          }
+          nav h1 {
+              margin: 0;
+              font-size: 1.2em;
+              color: white;
           }
           #nav-ul {
-              list-style-image: none;
+              list-style: none;
+              padding: 0;
+              margin: 10px 0 0 0;
           }
           .nav-li {
-              display: inline-block;
-              padding: 0 10px;
+              margin: 5px 0;
           }
           .nav-a {
               text-decoration: none;
-              color: #fff;
+              color: white;
+              font-weight: bold;
           }
- 
-          /* main container area beneath menu */
-          main {
-              background: rgb(245, 238, 219);
+
+          /* Content */
+          .content h1 {
+              color: black;
+          }
+
+          .portfolio {
+              list-style-type: none;
+              padding-left: 0;
+          }
+          .portfolio li {
+              background: #fff;
+              padding: 10px;
+              border-radius: 10px;
+              margin-bottom: 10px;
+          }
+          .portfolio li:hover {
+              background: #eee;
+          }
+          .portfolio a {
+              text-decoration: none;
+              color: #454545;
+          }
+
+          .portfolio-header {
               display: flex;
+              align-items: center;
+              justify-content: space-between;
           }
-          .content {
-              flex: 1;
-              padding: 15px;
+          .portfolio-header img {
+              max-height: 80px;
+              border-radius: 10px;
+              margin-left: 15px;
           }
-
-                   /* portfolio styles */
-         .content h1 {
-             color: black;
-         }
-
-         #portfolio {
-             list-style-type: none;
-             padding-left: 0;
-         }
-
-         #portfolio li {
-             background: #fff;
-             padding: 10px;
-             border-radius: 10px;
-             margin-bottom: 10px;
-         }
-
-         #portfolio li:hover {
-             background: #eee;
-         }
-
-         #portfolio a {
-             text-decoration: none;
-             color: #454545;
-         }
-      </style>
+        </style>
     </head>
 
     <body>
-      <div id="all-contents">
+      <div id="left-panel">
         <nav>
-            <h1>The First Website</h1>
+            <h1>Elijah Mattera's First Website</h1>
             <ul id="nav-ul">
-               <li class="nav-li">
-               <a class="nav-a" href="index.html">Home</a>
-             </li>
-             <li class="nav-li">
-               <a class="nav-a" href="portfolio.html">Portfolio</a>
-             </li>
-         </ul>
-     </nav>
+               <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
+               <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
 
-     <main>
-        <div class="content">
-          <h1>Portfolio</h1>
-            <ul id="portfolio">
+        <main class="content">
+          <div class="portfolio-header">
+              <h1>Portfolio</h1>
+             <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg" 
+     alt="Shinji and Kaworu">
+          </div>
+
+          <ul class="portfolio">
               <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure game for Halleb0t</a></li>
               <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game development on the web </a></li>
               <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and velocity applied to circle shapes...</a></li>
-            </ul>
-            <h2>Advanced Projects</h2>
-<ul id ="portfolio">
-    <li><a href="asd-projects/data-shapes"> Data Shapes: Iteration practice with patterns</a></li>
-    <li><a href="asd-projects/debugging-exercise"> Debugging Exercise: A debugging exercise</a></li>
-    <li><a href="asd-projects/snake">Snake: Feed the snake or be fed upon</a></li>
-    <li><a href="asd-projects/walker">Walker: Practice user input by animating walking boxes</a></li>
-    <li><a href="asd-projects/image-filtering">Image Filtering: Filter images using loops</a></li>
-    <li><a href="asd-projects/sorting">Sorting Exercise: An exercise on sorting algorithms</a></li>
-</ul>
-<h2>Mini Projects</h2>
-<ul id ="portfolio">
-    <li><a href="asd-projects/dice-app"> Dice App: A simple, interactive dice app built using jQuery</a></li>
-</ul>
-        </div>
-     </main>
+          </ul>
 
+          <h2>Advanced Projects</h2>
+          <ul class="portfolio">
+              <li><a href="asd-projects/data-shapes"> Data Shapes: Iteration practice with patterns</a></li>
+              <li><a href="asd-projects/debugging-exercise"> Debugging Exercise: A debugging exercise</a></li>
+              <li><a href="asd-projects/snake">Snake: Feed the snake or be fed upon</a></li>
+              <li><a href="asd-projects/walker">Walker: Practice user input by animating walking boxes</a></li>
+              <li><a href="asd-projects/image-filtering">Image Filtering: Filter images using loops</a></li>
+              <li><a href="asd-projects/sorting">Sorting Exercise: An exercise on sorting algorithms</a></li>
+          </ul>
+
+          <h2>Mini Projects</h2>
+          <ul class="portfolio">
+              <li><a href="asd-projects/dice-app"> Dice App: A simple, interactive dice app built using jQuery</a></li>
+          </ul>
+        </main>
       </div>
     </body>
 </html>

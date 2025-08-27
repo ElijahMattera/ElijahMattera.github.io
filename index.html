@@ -1,49 +1,104 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <title>Elijah's Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Elijah's Home</title>
+    <style type="text/css">
+      body {
+        background: url("https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp") 
+                    no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Left-side panel */
+      #left-panel {
+        background: rgba(245, 238, 219, 0.95);
+        width: 350px;
+        min-height: 100vh;
+        padding: 20px;
+        border-radius: 0 15px 15px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Navigation */
+      nav {
+        background: linear-gradient(to right, magenta, white);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      nav h1 {
+        margin: 0;
+        font-size: 1.2em;
+        color: white;
+      }
+      #nav-ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+      }
+      .nav-li {
+        margin: 5px 0;
+      }
+      .nav-a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Content */
+      .content {
+        flex: 1;
+      }
+
+      .home-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .home-header h1 {
+        margin: 0;
+        color: black;
+      }
+      .home-header img {
+        max-height: 100px;
+        border-radius: 10px;
+        margin-left: 15px;
+      }
+    </style>
   </head>
 
   <body>
-
-    <!-- All content goes here -->
-    <div id="all-contents">
+    <div id="left-panel">
       <nav>
         <h1>Elijah Mattera's First Website</h1>
-        <ul>
-          <li class="nav-li">
-            <a href="index.html"> home </a>
-          </li>
-          <li class="nav-li">
-            <a href="portfolio.html"> portfolio </a>
-          </li>
+        <ul id="nav-ul">
+          <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
+          <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
         </ul>
       </nav>
 
-      <main>
-        <!-- Sidebar section -->
-        <div class="sidebar">
-          <img class="sidebar-img" src="51rttY7a+9L.png" />
+      <main class="content">
+        <div class="home-header">
+          <h1>Elijah Mattera</h1>
+         <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg" 
+     alt="Shinji and Kaworu">
         </div>
 
-        <!-- Content section -->
-        <div class="content">
-          <h2>Elijah Mattera</h2>
-          <p>Student at Covingtion High School</p>
-
-          <!-- Interests section -->
-          <div id="interests">
-            <h3>Interests</h3>
-            <ul>
-              <li>Music</li>
-              <li>FootBall</li>
-              <li>Video Games</li>
-            </ul>
-          </div>
-
-        </div>
+        <p>Student at Covington High School</p>
+        <h3>Interests</h3>
+        <ul>
+          <li>Anime</li>
+          <li>Music</li>
+          <li>Minecraft</li>
+        </ul>
       </main>
     </div>
   </body>
