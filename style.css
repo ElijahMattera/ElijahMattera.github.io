@@ -1,9 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Elijah's Home</title>
 
-        <style type="text/css">
           body {
               background: url("https://i.imgur.com/WVjLEMR.png") no-repeat center center fixed;
               background-size: cover;
@@ -96,43 +91,4 @@
               text-shadow: 0 0 5px #fff,
                            0 0 10px magenta;
           }
-        </style>
-    </head>
-
-    <body>
-      <div id="all-contents">
-        <nav>
-            <h1>Elijah Mattera's First Website</h1>
-            <ul id="nav-ul">
-               <li class="nav-li">
-                 <a class="nav-a" href="index.html">Home</a>
-               </li>
-               <li class="nav-li">
-                 <a class="nav-a" href="portfolio.html">Portfolio</a>
-               </li>
-            </ul>
-        </nav>
-
-        <main>
-          <!-- Sidebar with image on the left -->
-          <div class="sidebar">
-            <img src="https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp" 
-                 alt="Profile Image">
-          </div>
-
-          <!-- Content on the right -->
-          <div class="content">
-            <h2>Elijah Mattera</h2>
-            <p>Student at Covington High School</p>
-            <h3>Interests</h3>
-            <ul>
-              <li>Anime</li>
-              <li>Music</li>
-              <li>Video Games</li>
-            </ul>
-          </div>
-        </main>
-
-      </div>
-    </body>
-</html>
+        
