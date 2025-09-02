@@ -1,23 +1,23 @@
-/* global sessionStorage */
+/* global $, sessionStorage */
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// VARIABLE DECLARATIONS ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 // HTML Objects
-var board = document.getElementById("board");
-var scoreElement = document.getElementById("score");
-var highScoreElement = document.getElementById("highScore");
+var board = $("#board");
+var scoreElement = $("#score");
+var highScoreElement = $("#highScore");
 
 // Game Variables
 var score = 0; 
 var started = false; 
 
 // TODO 4, Part 1: Create the apple variable
-var apple;
+var apple = {};
 
 // TODO 5, Part 1: Create the snake variable
-var snake;
+var snake = {};
 
 // Constant Variables
 var ROWS = 20;
@@ -48,10 +48,11 @@ init();
 
 function init() {
   // TODO 5, Part 2: initialize the snake
-  snake = {
-    head: null,
-    body: [],
-    tail: null,
+snake.body = [];
+makeSnakeSquare(10, 10);
+makeSnakeSquare(10, 9);
+makeSnakeSquare(10, 8);
+snake.head = snake.body[0];
   };
   makeSnakeSquare(10, 10); // head in the middle
   snake.head.direction = "right";
@@ -62,7 +63,7 @@ function init() {
   // TODO 6, Part 1: Initialize the interval
   clearInterval(updateInterval);
   updateInterval = setInterval(update, 150);
-}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// PROGRAM FUNCTIONS ////////////////////////////////////
@@ -90,10 +91,9 @@ function update() {
 
 function checkForNewDirection() {
   /* 
-  TODO 7: Update snake.head.direction based on the value of activeKey.
-  BONUS: Only allow direction changes to take place if the new direction is
-  perpendicular to the current direction
+  TODO 7: 
   */
+
   if (!activeKey) return;
 
   if (activeKey === KEY.LEFT && snake.head.direction !== "right") {
