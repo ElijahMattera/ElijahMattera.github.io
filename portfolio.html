@@ -1,129 +1,275 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Elijah's Portfolio</title>
-        <style type="text/css">
-          body {
-              background: url('https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp') no-repeat center center fixed;
-              background-size: cover;
-              font-family: arial;
-              margin: 0;
-              padding: 0;
-              color: #2d2d2d;
-          }
+  <head>
+    <title>Elijah's Portfolio</title>
+    <style type="text/css">
+      body {
+        background: url('https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp') no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #2d2d2d;
+      }
 
-          /* LEFT PANEL (nav + content) */
-          #left-panel {
-              background: rgba(245, 238, 219, 0.95);
-              width: 380px;
-              min-height: 100vh;
-              padding: 20px;
-              box-sizing: border-box;
-              border-radius: 0 15px 15px 0;
-              display: flex;
-              flex-direction: column;
-          }
+      #left-panel {
+        background: rgba(245, 238, 219, 0.95);
+        width: 420px;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 0 15px 15px 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                    0 0 25px magenta;
+      }
 
-          /* Navigation */
-          nav {
-              background: linear-gradient(to right, magenta, white);
-              padding: 15px;
-              border-radius: 10px;
-              margin-bottom: 20px;
-          }
-          nav h1 {
-              margin: 0;
-              font-size: 1.2em;
-              color: white;
-          }
-          #nav-ul {
-              list-style: none;
-              padding: 0;
-              margin: 10px 0 0 0;
-          }
-          .nav-li {
-              margin: 5px 0;
-          }
-          .nav-a {
-              text-decoration: none;
-              color: white;
-              font-weight: bold;
-          }
+      nav {
+        background: rgb(198, 4, 140);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(255, 0, 200, 0.8),
+                    0 0 30px rgba(255, 0, 200, 0.6);
+      }
 
-          /* Content */
-          .content h1 {
-              color: black;
-          }
+      nav h1 {
+        margin: 0;
+        font-size: 1.2em;
+        color: white;
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 20px magenta;
+      }
 
-          .portfolio {
-              list-style-type: none;
-              padding-left: 0;
-          }
-          .portfolio li {
-              background: #fff;
-              padding: 10px;
-              border-radius: 10px;
-              margin-bottom: 10px;
-          }
-          .portfolio li:hover {
-              background: #eee;
-          }
-          .portfolio a {
-              text-decoration: none;
-              color: #454545;
-          }
+      #nav-ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+      }
 
-          .portfolio-header {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-          }
-          .portfolio-header img {
-              max-height: 80px;
-              border-radius: 10px;
-              margin-left: 15px;
-          }
-        </style>
-    </head>
+      .nav-li {
+        margin: 5px 0;
+      }
 
-    <body>
-      <div id="left-panel">
-        <nav>
-            <h1>Elijah Mattera's First Website</h1>
-            <ul id="nav-ul">
-               <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
-               <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+      .nav-a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px magenta,
+                     0 0 20px magenta;
+      }
 
-        <main class="content">
-          <div class="portfolio-header">
-              <h1>Portfolio</h1>
-             <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg" 
-     alt="Shinji and Kaworu">
-          </div>
+      .content h1 {
+        color: black;
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px magenta;
+      }
 
-          <ul class="portfolio">
-              <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure game for Halleb0t</a></li>
-              <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game development on the web </a></li>
-              <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and velocity applied to circle shapes...</a></li>
-          </ul>
+      /* Portfolio grid (2 columns) */
+      .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding-left: 0;
+        list-style-type: none;
+      }
 
-          <h2>Advanced Projects</h2>
-          <ul class="portfolio">
-              <li><a href="asd-projects/data-shapes"> Data Shapes: Iteration practice with patterns</a></li>
-              <li><a href="asd-projects/debugging-exercise"> Debugging Exercise: A debugging exercise</a></li>
-              <li><a href="asd-projects/snake">Snake: Feed the snake or be fed upon</a></li>
-              <li><a href="asd-projects/walker">Walker: Practice user input by animating walking boxes</a></li>
-              <li><a href="asd-projects/image-filtering">Image Filtering: Filter images using loops</a></li>
-              <li><a href="asd-projects/sorting">Sorting Exercise: An exercise on sorting algorithms</a></li>
-          </ul>
+      .portfolio li {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 12px rgba(255, 0, 200, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-          <h2>Mini Projects</h2>
-          <ul class="portfolio">
-              <li><a href="asd-projects/dice-app"> Dice App: A simple, interactive dice app built using jQuery</a></li>
-          </ul>
-        </main>
-      </div>
-    </body>
+      .portfolio li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px magenta,
+                    0 0 30px white;
+      }
+
+      .portfolio a {
+        display: block;
+      }
+
+      .portfolio img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .portfolio-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+
+      .portfolio-header img {
+        max-height: 80px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px magenta,
+                    0 0 25px white;
+      }
+
+      /* Switcher buttons */
+      .switcher {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .switcher button {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        background: magenta;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0 10px magenta;
+        transition: background 0.3s;
+      }
+
+      .switcher button:hover {
+        background: rgb(180, 0, 140);
+      }
+
+      .switcher button.active {
+        background: white;
+        color: magenta;
+        box-shadow: 0 0 12px white, 0 0 20px magenta;
+      }
+
+      .portfolio-section {
+        display: none;
+      }
+
+      .portfolio-section.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="left-panel">
+      <nav>
+        <h1>Elijah Mattera's First Website</h1>
+        <ul id="nav-ul">
+          <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
+          <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <div class="portfolio-header">
+          <h1>Portfolio</h1>
+          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg" 
+               alt="Shinji and Kaworu">
+        </div>
+
+        <!-- Buttons to switch portfolio categories -->
+        <div class="switcher">
+          <button onclick="showSection('beginner')" class="active">Beginner</button>
+          <button onclick="showSection('advanced')">Advanced</button>
+          <button onclick="showSection('mini')">Mini</button>
+        </div>
+
+ <!-- Beginner Projects -->
+<div id="beginner" class="portfolio-section active">
+  <ul class="portfolio">
+    <li>
+      <a href="projects/platformer/">
+        <img src="Platformer.png" alt="Platformer preview">
+        <div class="caption">Platformer</div>
+      </a>
+    </li>
+    <li>
+      <a href="projects/bouncing-box/">
+        <img src="Bouncing_Box.png" alt="Bouncing Box preview">
+        <div class="caption">Bouncing Box</div>
+      </a>
+    </li>
+    <li>
+      <a href="projects/circularity/">
+        <img src="Circularity.png" alt="Circularity preview">
+        <div class="caption">Circularity</div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Advanced Projects -->
+<div id="advanced" class="portfolio-section">
+  <ul class="portfolio">
+    <li>
+      <a href="asd-projects/data-shapes">
+        <img src="https://i.imgur.com/f6vwMJG.png" alt="Data Shapes">
+        <div class="caption">Data Shapes</div>
+      </a>
+    </li>
+    <li>
+      <a href="asd-projects/debugging-exercise">
+        <img src="https://i.imgur.com/hk1W3vD.png" alt="Debugging">
+        <div class="caption">Debugging Exercise</div>
+      </a>
+    </li>
+    <li>
+      <a href="asd-projects/snake">
+        <img src="https://i.imgur.com/2V5qKrX.png" alt="Snake">
+        <div class="caption">Snake</div>
+      </a>
+    </li>
+    <li>
+      <a href="asd-projects/walker">
+        <img src="https://i.imgur.com/WxwJkdk.png" alt="Walker">
+        <div class="caption">Walker</div>
+      </a>
+    </li>
+    <li>
+      <a href="asd-projects/image-filtering">
+        <img src="https://i.imgur.com/OKq7G1Q.png" alt="Image Filtering">
+        <div class="caption">Image Filtering</div>
+      </a>
+    </li>
+    <li>
+      <a href="asd-projects/sorting">
+        <img src="https://i.imgur.com/JqClP8P.png" alt="Sorting Exercise">
+        <div class="caption">Sorting Exercise</div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Mini Projects -->
+<div id="mini" class="portfolio-section">
+  <ul class="portfolio">
+    <li>
+      <a href="asd-projects/dice-app">
+        <img src="https://i.imgur.com/qk4W5Xd.png" alt="Dice App">
+        <div class="caption">Dice App</div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <script>
+      function showSection(sectionId) {
+        document.querySelectorAll('.portfolio-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+
+        document.querySelectorAll('.switcher button').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+      }
+    </script>
+  </body>
 </html>

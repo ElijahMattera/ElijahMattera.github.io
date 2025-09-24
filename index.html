@@ -4,101 +4,175 @@
     <title>Elijah's Home</title>
     <style type="text/css">
       body {
-        background: url("https://vsthemes.org/uploads/posts/workshop/277636492763fa645e74177076426460.webp") 
-                    no-repeat center center fixed;
+        background: url(atlasmontgomeryjohnston.jpg) no-repeat center center fixed;
         background-size: cover;
+        color: rgb(45, 45, 45);
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
       }
 
-      /* Left-side panel */
-      #left-panel {
-        background: rgba(245, 238, 219, 0.95);
-        width: 350px;
-        min-height: 100vh;
-        padding: 20px;
-        border-radius: 0 15px 15px 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* Navigation */
-      nav {
-        background: linear-gradient(to right, magenta, white);
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
-      nav h1 {
-        margin: 0;
-        font-size: 1.2em;
-        color: white;
-      }
-      #nav-ul {
-        list-style: none;
-        padding: 0;
-        margin: 10px 0 0 0;
-      }
-      .nav-li {
-        margin: 5px 0;
-      }
-      .nav-a {
-        text-decoration: none;
-        color: white;
+      header {
+        font-size: 1.5em;
         font-weight: bold;
       }
 
-      /* Content */
-      .content {
-        flex: 1;
+      /* Make full width instead of centered */
+      #all-contents {
+        width: 100%;       /* use full screen */
+        margin: 0;         /* remove auto centering */
+        padding-left: 20px; /* slight space from left edge */
+        box-sizing: border-box;
       }
 
-      .home-header {
+      /* navigation menu */
+      nav {
+        background: rgb(198, 4, 140);
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        /* MAGENTA CHROMA GLOW */
+        box-shadow: 0 0 15px rgba(255, 0, 200, 0.8),
+                    0 0 30px rgba(255, 0, 200, 0.6);
+      }
+
+      h1 {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-      }
-      .home-header h1 {
+        color: rgb(255, 255, 255);
+        flex: 1;
         margin: 0;
-        color: black;
+        /* White glowing chroma for text */
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 20px magenta;
       }
-      .home-header img {
-        max-height: 100px;
+
+      #nav-ul {
+        list-style-image: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-li {
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      .nav-a {
+        text-decoration: none;
+        color: #fff;
+        /* White neon glow on links */
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px magenta,
+                     0 0 20px magenta;
+      }
+
+      /* main container */
+      main {
+        background: rgb(245, 238, 219);
+        display: flex;
         border-radius: 10px;
-        margin-left: 15px;
+        padding: 15px;
+        margin-top: 10px;
+        margin-right: 20px; /* so text doesn’t stick to edge */
+        /* White glow */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                    0 0 30px rgba(255, 0, 200, 0.6);
+      }
+
+      /* sidebar (image on left) */
+      .sidebar {
+        margin-right: 20px;
+      }
+
+      .sidebar img {
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px magenta,
+                    0 0 25px white;
+      }
+
+      /* content (text on right) */
+      .content {
+        flex: 1;
+        text-align: left;   /* ensure text stays left */
+      }
+
+      .content h2,
+      .content h3,
+      .content p,
+      .content li {
+        /* White chroma glow on all text inside main box */
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px magenta;
+      }
+
+      /* ------------------------- */
+      /* Photo Gallery Section     */
+      /* ------------------------- */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px magenta,
+                    0 0 20px white;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
       }
     </style>
   </head>
 
   <body>
-    <div id="left-panel">
+    <div id="all-contents">
+      <!-- Navigation -->
       <nav>
         <h1>Elijah Mattera's First Website</h1>
         <ul id="nav-ul">
           <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
           <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-li"><a class="nav-a" href="#gallery">Photos</a></li>
         </ul>
       </nav>
 
-      <main class="content">
-        <div class="home-header">
-          <h1>Elijah Mattera</h1>
-         <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg" 
-     alt="Shinji and Kaworu">
+      <!-- Main Content -->
+      <main>
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg"
+               alt="Shinji and Kaworu">
         </div>
 
-        <p>Student at Covington High School</p>
-        <h3>Interests</h3>
-        <ul>
-          <li>Anime</li>
-          <li>Music</li>
-          <li>Minecraft</li>
-        </ul>
+        <!-- Text Content -->
+        <div class="content">
+          <h2>Elijah Mattera</h2>
+          <p>Student at Covington High School</p>
+          <h3>Interests</h3>
+          <ul>
+            <li>Anime</li>
+            <li>Music</li>
+            <li>Minecraft</li>
+          </ul>
+
+          <!-- Photo Gallery -->
+          <h2 id="gallery">My Photo Gallery</h2>
+          <div class="gallery">
+            <img src="atlasmontgomeryjohnston.jpg" alt="Photo 1">
+            <img src="Me_With_Twin.jpg" alt="Photo 2">
+            <img src="eli_martin.jpg" alt="Photo 3">
+            <img src="Chris.png" alt="Photo 4">
+          </div>
+        </div>
       </main>
     </div>
   </body>
