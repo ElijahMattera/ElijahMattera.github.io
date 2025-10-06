@@ -4,8 +4,24 @@
     <title>Elijah's Home</title>
     <style type="text/css">
       body {
-        background: url(atlasmontgomeryjohnston.jpg) no-repeat center center fixed;
-        background-size: cover;
+        background: #222;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* Evangelion wallpaper as a smaller, translucent overlay */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url(Evangelion_wallpaper.png) no-repeat center center;
+        background-size: contain;
+        opacity: 0.35;
+        z-index: 0;
+        pointer-events: none;
         color: rgb(45, 45, 45);
         font-family: Arial, sans-serif;
         margin: 0;
@@ -70,7 +86,7 @@
 
       /* main container */
       main {
-        background: rgb(245, 238, 219);
+  background: rgba(245, 238, 219, 0.85);
         display: flex;
         border-radius: 10px;
         padding: 15px;
@@ -134,7 +150,7 @@
   </head>
 
   <body>
-    <div id="all-contents">
+  <div id="all-contents" style="position: relative; z-index: 1;">
       <!-- Navigation -->
       <nav>
         <h1>Elijah Mattera's First Website</h1>
@@ -142,6 +158,7 @@
           <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
           <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
           <li class="nav-li"><a class="nav-a" href="#gallery">Photos</a></li>
+          <li class="nav-li"><a class="nav-a" href="Evangelion_Lore.html">Evangelion Lore</a></li>
         </ul>
       </nav>
 
@@ -164,14 +181,7 @@
             <li>Minecraft</li>
           </ul>
 
-          <!-- Photo Gallery -->
-          <h2 id="gallery">My Photo Gallery</h2>
-          <div class="gallery">
-            <img src="atlasmontgomeryjohnston.jpg" alt="Photo 1">
-            <img src="Me_With_Twin.jpg" alt="Photo 2">
-            <img src="eli_martin.jpg" alt="Photo 3">
-            <img src="Chris.png" alt="Photo 4">
-          </div>
+          <!-- Photo Gallery link now in Photos tab only -->
         </div>
       </main>
     </div>
