@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Elijah's Home</title>
@@ -11,7 +11,7 @@
 
       /* Evangelion wallpaper as a smaller, translucent overlay */
       body::before {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -35,8 +35,8 @@
 
       /* Make full width instead of centered */
       #all-contents {
-        width: 100%;       /* use full screen */
-        margin: 0;         /* remove auto centering */
+        width: 100%; /* use full screen */
+        margin: 0; /* remove auto centering */
         padding-left: 20px; /* slight space from left edge */
         box-sizing: border-box;
       }
@@ -49,7 +49,7 @@
         border-radius: 10px;
         /* MAGENTA CHROMA GLOW */
         box-shadow: 0 0 15px rgba(255, 0, 200, 0.8),
-                    0 0 30px rgba(255, 0, 200, 0.6);
+          0 0 30px rgba(255, 0, 200, 0.6);
       }
 
       h1 {
@@ -59,9 +59,7 @@
         flex: 1;
         margin: 0;
         /* White glowing chroma for text */
-        text-shadow: 0 0 5px #fff,
-                     0 0 10px #fff,
-                     0 0 20px magenta;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px magenta;
       }
 
       #nav-ul {
@@ -79,14 +77,12 @@
         text-decoration: none;
         color: #fff;
         /* White neon glow on links */
-        text-shadow: 0 0 5px #fff,
-                     0 0 10px magenta,
-                     0 0 20px magenta;
+        text-shadow: 0 0 5px #fff, 0 0 10px magenta, 0 0 20px magenta;
       }
 
       /* main container */
       main {
-  background: rgba(245, 238, 219, 0.85);
+        background: rgba(245, 238, 219, 0.85);
         display: flex;
         border-radius: 10px;
         padding: 15px;
@@ -94,7 +90,7 @@
         margin-right: 20px; /* so text doesn’t stick to edge */
         /* White glow */
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
-                    0 0 30px rgba(255, 0, 200, 0.6);
+          0 0 30px rgba(255, 0, 200, 0.6);
       }
 
       /* sidebar (image on left) */
@@ -105,14 +101,13 @@
       .sidebar img {
         width: 200px;
         border-radius: 10px;
-        box-shadow: 0 0 15px magenta,
-                    0 0 25px white;
+        box-shadow: 0 0 15px magenta, 0 0 25px white;
       }
 
       /* content (text on right) */
       .content {
         flex: 1;
-        text-align: left;   /* ensure text stays left */
+        text-align: left; /* ensure text stays left */
       }
 
       .content h2,
@@ -120,8 +115,7 @@
       .content p,
       .content li {
         /* White chroma glow on all text inside main box */
-        text-shadow: 0 0 5px #fff,
-                     0 0 10px magenta;
+        text-shadow: 0 0 5px #fff, 0 0 10px magenta;
       }
 
       /* ------------------------- */
@@ -137,8 +131,7 @@
       .gallery img {
         width: 100%;
         border-radius: 10px;
-        box-shadow: 0 0 10px magenta,
-                    0 0 20px white;
+        box-shadow: 0 0 10px magenta, 0 0 20px white;
         transition: transform 0.3s ease;
         cursor: pointer;
       }
@@ -150,15 +143,19 @@
   </head>
 
   <body>
-  <div id="all-contents" style="position: relative; z-index: 1;">
+    <div id="all-contents" style="position: relative; z-index: 1">
       <!-- Navigation -->
       <nav>
         <h1>Elijah Mattera's First Website</h1>
         <ul id="nav-ul">
           <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
-          <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-li">
+            <a class="nav-a" href="portfolio.html">Portfolio</a>
+          </li>
           <li class="nav-li"><a class="nav-a" href="#gallery">Photos</a></li>
-          <li class="nav-li"><a class="nav-a" href="Evangelion_Lore.html">Evangelion Lore</a></li>
+          <li class="nav-li">
+            <a class="nav-a" href="Evangelion_Lore.html">Evangelion Lore</a>
+          </li>
         </ul>
       </nav>
 
@@ -166,8 +163,10 @@
       <main>
         <!-- Sidebar -->
         <div class="sidebar">
-          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg"
-               alt="Shinji and Kaworu">
+          <img
+            src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/evangelion-3-33-shinji-kaworu.jpg"
+            alt="Shinji and Kaworu"
+          />
         </div>
 
         <!-- Text Content -->
